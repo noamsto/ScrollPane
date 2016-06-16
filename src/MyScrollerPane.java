@@ -22,20 +22,13 @@ public class MyScrollerPane extends JPanel implements AdjustmentListener, Compon
 	JScrollBar hS;	//Horizontal scrollbar.
 	JScrollBar vS;	//vertical scrollbar.
 	Component window;	//the actual display window.
-	
 
-	
-	
 	
 	public MyScrollerPane(Component c) {
 		
-		
 		this.addComponentListener(this); //this will make sure resizing window updating scroll bars maximum value.
-		
+
 		window= c;	//get the display window.
-		
-		this.setLayout(new BorderLayout());	//set border layout.
-		
 		
 		inner = new JPanel();	//will be used as a 'viewing window', window will be moved in relation to this component.
 		inner.setLayout(null);	//disable layout manager.
@@ -44,18 +37,17 @@ public class MyScrollerPane extends JPanel implements AdjustmentListener, Compon
 		//setting scroll bars.
 		hS= new JScrollBar(Adjustable.HORIZONTAL);	
 		vS= new JScrollBar(Adjustable.VERTICAL);
-		//
-		
-		//added all the components.
-		this.add(inner, BorderLayout.CENTER);
-		this.add(hS, BorderLayout.SOUTH);
-		this.add(vS, BorderLayout.WEST);
-		
-
 		//create the adjustment listenrs, the main abilty.
 		hS.addAdjustmentListener(this); 
 		vS.addAdjustmentListener(this);
+		//
 		
+		//added all the components.
+		this.setLayout(new BorderLayout());	//set border layout.
+		this.add(inner, BorderLayout.CENTER);
+		this.add(hS, BorderLayout.SOUTH);
+		this.add(vS, BorderLayout.WEST);
+	
 	}
 
 	

@@ -9,25 +9,21 @@ public class Main {
 	public static void main(String[] args) {
 
 
-		JFrame app = new JFrame();
+		JFrame app = new JFrame();	//the containing app.
 		
-		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		app.setPreferredSize(new Dimension(800, 600));		
+		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close operation.
+		app.setPreferredSize(new Dimension(800, 600));		//set a size for the genral window.
 		
-		JLabel myPic = new JLabel();
-		ImageIcon img = new ImageIcon("cat.jpg");
-		myPic.setIcon(img);
-		myPic.setSize(new Dimension(img.getIconWidth(), img.getIconHeight()));
+		JLabel myPic = new JLabel();	//prepare a picture label.
+		ImageIcon img = new ImageIcon("cat.jpg");	//open image with image icon.
+		myPic.setIcon(img);	//set the label to hold the picture.
+		myPic.setSize(new Dimension(img.getIconWidth(), img.getIconHeight()));	//set the size of the label to the picture size.
 
-		MyScrollerPane msp= new MyScrollerPane(myPic);
+		MyScrollerPane msp= new MyScrollerPane(myPic);	//create the scroll panel, added the picture to it.
 		
-		
-		app.add(msp);
-		app.pack();
+		app.add(msp);	//add this app the scroll panel.
+		app.pack();		//pack it and show.
 		app.setVisible(true);
-		
-			
-		
 		
 	}
 
