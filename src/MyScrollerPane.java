@@ -18,7 +18,7 @@ public class MyScrollerPane extends JPanel implements AdjustmentListener, Compon
 	
 	//all the necessary components.
 	
-	JPanel inner;	//view window, will hold the recieved window .
+	JPanel inner;	//view window, will hold the received window .
 	JScrollBar hS;	//Horizontal scrollbar.
 	JScrollBar vS;	//vertical scrollbar.
 	Component window;	//the actual display window.
